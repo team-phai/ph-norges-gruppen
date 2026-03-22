@@ -1,0 +1,18 @@
+.env
+.playwright-data/
+.claude/worktrees/
+.claude/settings.local.json
+node_modules/
+visualizer/node_modules/
+visualizer/dist/
+
+# Force-track .claude/skills/ and .claude/agents/ despite global gitignore
+# If your global ~/.gitignore ignores .claude/, you must use: git add -f .claude/
+# The negation rules below ensure git status shows changes in these directories
+!.claude
+
+assets/
+runs/
+data/
+
+.DS_Store

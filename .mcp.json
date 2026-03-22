@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": ["@playwright/mcp@latest", "--user-data-dir", ".playwright-data"]
+    },
+    "nmiai": {
+      "url": "https://mcp-docs.ainm.no/mcp"
+    }
+  }
+}

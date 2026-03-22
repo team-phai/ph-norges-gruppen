@@ -1,0 +1,19 @@
+services:
+  train:
+    build: .
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    ipc: host
+    shm_size: "16g"
+    volumes:
+      - /opt/norgesgruppen/src:/workspace/src:ro
+      - /opt/norgesgruppen/assets:/workspace/assets:ro
+      - /opt/norgesgruppen/data:/workspace/data:rw
+      - /opt/norgesgruppen/runs:/workspace/runs:rw
+      - /opt/norgesgruppen/logs:/workspace/logs:rw
+    working_dir: /workspace

@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(*)",
+      "Read(*)",
+      "Write(*)",
+      "Edit(*)",
+      "Grep(*)",
+      "Glob(*)",
+      "WebFetch(*)",
+      "mcp__playwright__*"
+    ],
+    "defaultMode": "bypassPermissions"
+  }
+}

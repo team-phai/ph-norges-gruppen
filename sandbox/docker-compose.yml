@@ -1,0 +1,21 @@
+services:
+  server:
+    build:
+      context: .
+      dockerfile: Dockerfile.server
+    ports:
+      - "8000:8000"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./data:/data:ro
+      # Shared work dir: must be mounted at the SAME path in both this container
+      # and visible to the host Docker daemon, so sandbox container volume mounts
+      # resolve correctly. Both HOST_WORK_DIR and the bind mount use /work.
+      - /work:/work
+    environment:
+      - SANDBOX_IMAGE=nmiai/norgesgruppen-sandbox:latest
+      - DATA_DIR=/data
+      - HOST_WORK_DIR=/work
+      # HOST_DATA_DIR must be the absolute host path to ./data (for sandbox mounts)
+      - HOST_DATA_DIR=${HOST_DATA_DIR:-/opt/norgesgruppen/sandbox/data}
+    restart: unless-stopped
