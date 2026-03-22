@@ -1,8 +1,8 @@
 # NorgesGruppen Object Detection Challenge
 
-**NM i AI 2026** | Team PH | Score: **0.9266** | **1st Place on this challenge**
+**NM i AI 2026** | Team PH | Score: **0.9266** |
 
-> NM i AI 2026 consisted of 3 separate challenges. This was our solution for the NorgesGruppen object detection challenge, where we placed 1st. We did not win the overall leaderboard.
+> NM i AI 2026 consisted of 3 separate challenges. This was our solution for the NorgesGruppen object detection challenge.
 
 ## The Challenge
 
